@@ -18,7 +18,7 @@ app.use(express.json())
 // using cors: to allow requests from two different hosts (servers)
 const cors = require('cors');
 app.use(cors({
-    origin: ['http://localhost:3000'],
+    origin: ['https://finalprojectreactapp.herokuapp.com/'],
     credentials: true
 }))
 
