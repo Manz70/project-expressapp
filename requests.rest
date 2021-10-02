@@ -6,7 +6,7 @@ Content-Type: application/json
     "name": "Ali Abdulaziz",
     "email": "ali@example.com",
     "password": "Pa$$w0rd",
-    "confirmation": "Pa$$w0r"
+    "confirmation": "Pa$$w0rd"
 }
 
 ### Login
@@ -15,7 +15,7 @@ Content-Type: application/json
 
 {
     "email": "ali@example.com",
-    "password": "Pa$$w0rd2"
+    "password": "Pa$$w0rd"
 }
 
 ### Logout

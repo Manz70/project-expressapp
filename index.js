@@ -2,6 +2,7 @@
 // To access the values use: process.env.<name-of-variable>
 require('dotenv').config()
 
+
 // Connect to mongodb
 const connection = require('./config/connection')
 connection.open().catch(err => console.log(err))
@@ -13,6 +14,13 @@ const app = express()
 // Add body parser middleware
 app.use(express.json())
 // app.use(express.urlencoded({ extended: true }))
+
+// using cors: to allow requests from two different hosts (servers)
+const cors = require('cors');
+app.use(cors({
+    origin: ['http://localhost:3000'],
+    credentials: true
+}))
 
 // Passport Middleware
 const session = require('./config/session')

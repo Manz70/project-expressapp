@@ -22,7 +22,10 @@ router.put('/register', checkSchema(registerSchema), handleErrors, async (req, r
     })
 })
 
-router.post('/login', passport.authenticate('local'), async (req, res) => {
+router.post('/login', (req, res, next) => {
+    console.log(req.body)
+    next()
+}, passport.authenticate('local'), async (req, res) => {
     return res.send(req.user)
 })
 
